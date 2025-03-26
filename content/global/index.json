@@ -7,8 +7,8 @@
         "label": "Home"
       },
       {
-        "href": "/posts",
-        "label": "Blog"
+        "href": "/docs",
+        "label": "Docs"
       },
       {
         "href": "/about",
