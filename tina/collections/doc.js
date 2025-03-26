@@ -3,8 +3,8 @@
  */
 export default {
 	label: "Docs",
-	name: "documentation",
-	path: "content/documentation",
+	name: "doc",
+	path: "content/doc",
 	fields: [
 		{
 			type: "string",
