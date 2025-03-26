@@ -1,7 +1,7 @@
 import { defineConfig } from "tinacms";
+import doc from "./collections/doc";
 import global from "./collections/global";
 import page from "./collections/page";
-import doc from "./collections/doc";
 
 export const config = defineConfig({
 	clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
