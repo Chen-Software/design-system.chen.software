@@ -9,7 +9,7 @@ export default function PostList(props) {
 				{props.data.docConnection.edges.map((post) => (
 					<Box key={post.node.id}>
 						<Link href={`/docs/${post.node._sys.filename}`}>
-							{post.node._sys.filename}
+							{post.node.title}
 						</Link>
 					</Box>
 				))}
