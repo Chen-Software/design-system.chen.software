@@ -2,14 +2,14 @@
 import { tinaField, useTina } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { Box } from "../../../styled-system/jsx";
-import type { PostQuery } from "../../../tina/__generated__/types";
+import type { DocQuery } from "../../../tina/__generated__/types";
 
 interface ClientPageProps {
 	query: string;
 	variables: {
 		relativePath: string;
 	};
-	data: PostQuery;
+	data: DocQuery;
 }
 
 export default function Post(props: ClientPageProps) {
