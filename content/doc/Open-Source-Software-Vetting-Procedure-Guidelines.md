@@ -1,95 +1,130 @@
 ---
-title: Open Source Software Vetting Procedure Guidelines
+title: Design Tokens
 ---
 
+Design tokens are the foundational elements of Chen's Design System, representing the visual primitives that define colors, typography, spacing, and other stylistic properties. By using tokens instead of hard-coded values, we ensure consistency across components and enable systematic theming.
 
-## Introduction
+Chen's Design System leverages the default PandaCSS theme preset, which provides a robust set of design tokens out of the box. These tokens are defined as CSS custom properties and can be seamlessly integrated into components or extended to meet project-specific needs.
 
-Open source software offers numerous benefits, including cost-effectiveness, flexibility, and community-driven development. However, as highlighted by Ken Thompson's "Reflections on Trusting Trust" lecture, there are inherent security risks in using code not entirely created by oneself. This document outlines comprehensive guidelines for vetting open source projects to mitigate these risks while leveraging the advantages of open source software.
+***
 
+## Default Theme Tokens
 
-## Project Evaluation
+Below is a comprehensive list of design tokens provided by PandaCSS's default preset. These are categorized for clarity and ready to use in your components:
 
-### 1. Community and Maintenance
+### Colors
 
-* Assess the project's community size and activity level.
-* Evaluate the frequency of updates and responsiveness to issues.
-* Check the number of contributors and their reputation in the open source community.
+A structured palette of semantic and primitive colors.
 
-### 2. Code Quality and Security
+// Example usage in a component  
+const styles = css({  
+  color: \&apos;yellow\.500\&apos;,       // Primary yellow  
+  backgroundColor: \&apos;gray.900\&apos; // Dark background  
+});  
 
-* Review the project's coding standards and practices.
-* Examine the frequency and thoroughness of code reviews.
-* Assess the project's vulnerability disclosure policy and response time to security issues.
+Token Structure:
 
-### 3. Documentation and Transparency
+* Primitives: white, black, gray, red, orange, yellow, green, blue, purple, pink
+* Semantic: text, background, border, primary, secondary, error, warning, success, info
+* Scales: Each color has 50–950 shades (e.g., blue.200, red.600).
 
-* Evaluate the completeness and clarity of the project's documentation.
-* Check for transparent development processes and decision-making.
-* Assess the availability of detailed release notes and changelogs.
+***
 
-## Security Measures
+### Typography
 
-### 1. Code Auditing
+Predefined text styles for headings, body text, and more.
 
-* Conduct regular automated code scans using multiple security tools.
-* Perform manual code reviews, especially for critical components.
-* Engage third-party security experts for comprehensive audits of high-risk projects.
+// Apply a heading style  
+css({ textStyle: \&apos;heading.xl\&apos; });  
 
-### 2. Dependency Management
+Tokens Include:
 
-* Implement a robust dependency tracking system.
-* Regularly update and patch all dependencies.
-* Evaluate the security practices of upstream dependencies.
+* Font Families: sans (default system stack), mono (monospace)
+* Font Sizes: xs, sm, md, lg, xl, 2xl to 6xl
+* Font Weights: thin, extralight, light, normal, medium, semibold, bold, extrabold, black
+* Line Heights: none, tight, normal, relaxed, loose
+* Letter Spacing: tighter, tight, normal, wide, wider, widest
 
-### 3. Build and Deployment Security
+***
 
-* Verify the integrity of source code and build artifacts.
-* Implement reproducible builds to ensure consistency between source and binaries.
-* Use secure, multi-factor authentication for all project-related accounts.
+### Spacing & Sizes
 
-## Governance and Compliance
+Consistent spacing scales for margins, padding, and dimensions.
 
-### 1. License Compliance
+// Apply a spacing token  
+css({ padding: \&apos;spacing.4\&apos;, width: \&apos;sizes.full\&apos; });  
 
-* Ensure the project's license is compatible with your organization's policies.
-* Maintain an inventory of all open source components and their licenses.
-* Implement processes to manage license obligations and restrictions.
+Tokens Include:
 
-### 2. Contribution Policies
+* Spacing: 0, 1 (4px), 2 (8px), up to 40 (160px)
+* Sizes: xs, sm, md, lg, xl, 2xl to 4xl, plus full (100%), screen (100vh/100vw)
 
-* Establish clear guidelines for contributing to open source projects.
-* Implement a review process for all outgoing contributions.
-* Ensure all contributions align with organizational security and intellectual property policies.
+***
 
-## Risk Assessment and Mitigation
+### Radii
 
-### 1. Critical Path Analysis
+Border radius tokens for rounded corners.
 
-* Identify open source components in the critical path of your systems.
-* Develop contingency plans for critical open source dependencies.
-* Consider maintaining forks or internal versions of critical components.
+css({ borderRadius: \&apos;radii.lg\&apos; });  
 
-### 2. Ongoing Monitoring
+Tokens: none, sm, md, lg, xl, full (9999px).
 
-* Implement continuous monitoring of project activity and security advisories.
-* Establish alerts for significant changes in project governance or maintenance.
-* Regularly reassess the risk profile of each open source component in use.
+***
 
-## Training and Awareness
+### Breakpoints
 
-### 1. Developer Education
+Responsive design tokens for media queries.
 
-* Provide training on open source security best practices.
-* Educate developers on the risks highlighted in Thompson's "Trusting Trust" lecture.
-* Foster a culture of security awareness in open source usage and contribution.
+// Responsive style example  
+css({  
+  fontSize: { base: \&apos;md\&apos;, md: \&apos;lg\&apos;, lg: \&apos;xl\&apos; }  
+});  
 
-### 2. Management Awareness
+Default Breakpoints:
 
-* Ensure management understands the benefits and risks of open source adoption.
-* Provide regular updates on the organization's open source risk profile.
-* Develop metrics to measure the effectiveness of open source vetting processes.
+* sm: 640px
+* md: 768px
+* lg: 1024px
+* xl: 1280px
+* 2xl: 1536px
 
-## Conclusion
+***
 
-By implementing these guidelines, organizations can harness the power of open source software while mitigating associated risks. Regular review and adaptation of these policies are crucial to address evolving threats and changes in the open source ecosystem.
+### Shadows
+
+Elevation and depth tokens.
+
+css({ boxShadow: \&apos;shadows.xl\&apos; });  
+
+Tokens: xs, sm, md, lg, xl, 2xl.
+
+***
+
+### Z-Index
+
+Layering control for components.
+
+css({ zIndex: \&apos;zIndex.modal\&apos; });  
+
+Tokens: auto, 0, 10, 20, 30, 40, 50 (predefined for common use cases like modals, tooltips).
+
+***
+
+### Durations & Easings
+
+Animation timing tokens.
+
+css({ transition: \&apos;all duration.300 easing.ease-out\&apos; });  
+
+* Durations: fast (150ms), normal (300ms), slow (500ms)
+* Easings: default, linear, ease-in, ease-out, ease-in-out.
+
+***
+
+## Customization
+
+While Chen's Design System uses the default tokens for consistency, you can extend or override them in your panda.config.ts to align with brand-specific requirements. Learn more in the [PandaCSS Theme Documentation](https://panda-css.com/docs/customization/theme).
+
+***
+
+Next Up: Learn how to apply these tokens in components using Recipes or customize them for your project.
