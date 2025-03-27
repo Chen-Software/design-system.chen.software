@@ -5,7 +5,6 @@ import { Box, Flex } from "../../../styled-system/jsx";
 import type {
 	DocConnectionQuery,
 	DocQuery,
-	PageConnectionQuery,
 } from "../../../tina/__generated__/types";
 import PostList from "../post-list";
 
