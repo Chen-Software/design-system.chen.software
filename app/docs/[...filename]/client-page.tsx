@@ -3,8 +3,9 @@ import { tinaField, useTina } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { Box, Flex } from "../../../styled-system/jsx";
 import type {
+	DocConnectionQuery,
+	DocQuery,
 	PageConnectionQuery,
-	PostQuery,
 } from "../../../tina/__generated__/types";
 import PostList from "../post-list";
 
@@ -13,8 +14,8 @@ interface ClientPageProps {
 	variables: {
 		relativePath: string;
 	};
-	data: PostQuery;
-	postListData: PageConnectionQuery;
+	data: DocQuery;
+	postListData: DocConnectionQuery;
 }
 
 export default function Post(props: ClientPageProps) {
@@ -24,17 +25,15 @@ export default function Post(props: ClientPageProps) {
 		variables: props.variables,
 		data: props.data,
 	});
-	const content = data.post.body;
+	const content = data.doc.body;
 	return (
 		<Flex flexDirection="row" gap={4}>
 			<Box minWidth={["128px", "196px", "256px", "320px", "384px"]}>
 				<PostList data={props.postListData} sidebarMode={true} />
 			</Box>
 			<Box>
-				<h1 data-tina-field={tinaField(data.post, "title")}>
-					{data.post.title}
-				</h1>
-				<Box data-tina-field={tinaField(data.post, "body")}>
+				<h1 data-tina-field={tinaField(data.doc, "title")}>{data.doc.title}</h1>
+				<Box data-tina-field={tinaField(data.doc, "body")}>
 					<TinaMarkdown content={content} />
 				</Box>
 			</Box>

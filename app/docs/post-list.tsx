@@ -9,9 +9,9 @@ export default function PostList({ sidebarMode = false, ...props }) {
 				Posts
 			</Box>
 			<Box>
-				{props.data.postConnection.edges.map((post) => (
+				{props.data.docConnection.edges.map((post) => (
 					<Box key={post.node.id}>
-						<Link href={`/posts/${post.node._sys.filename}`}>
+						<Link href={`/docs/${post.node._sys.filename}`}>
 							{post.node.title}
 						</Link>
 					</Box>

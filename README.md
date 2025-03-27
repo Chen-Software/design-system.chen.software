@@ -1,4 +1,6 @@
-# TinaCMS Next.js TypeScript Starter
+# Design-System.Chen.Software Website
+
+<https://Design-System.Chen.Software>
 
 ## Introduction
 
@@ -15,13 +17,13 @@ This repository is available on both Radicle and GitHub:
 Clone using [the Radicle CLI](https://github.com/radicle-dev/heartwood):
 
 ```bash
-rad clone rad:z3nSm4EXspD9WXm6H2Zj7rLqcbn4h
+rad clone rad:z29UsQSSCXfxJonkQY3xaAAJZ6w4a
 ```
 
 Or clone from the public Radicle seed node using standard `git`:
 
 ```bash
-git clone https://seed.radicle.garden/z3nSm4EXspD9WXm6H2Zj7rLqcbn4h.git tina-next-ts
+git clone https://seed.radicle.garden/z29UsQSSCXfxJonkQY3xaAAJZ6w4a.git design-system.chen.software
 ```
 
 #### GitHub (Alternative)
@@ -29,7 +31,7 @@ git clone https://seed.radicle.garden/z3nSm4EXspD9WXm6H2Zj7rLqcbn4h.git tina-nex
 If using GitHub, clone from the `dev/main` branch to avoid propagating GitHub-specific references to Radicle:
 
 ```bash
-git clone -b dev/main https://github.com/Chen-Software/tina-next-ts.git
+git clone -b dev/main https://github.com/Chen-Software/design-system.chen.software.git
 ```
 
 **Note**: The Radicle version is considered the canonical source of truth.
@@ -109,7 +111,7 @@ Replace `{page-name}` with your target page (e.g., `about`)
 #### 1. Create PR from `content/main` to `main`
 
    ```txt
-   https://github.com/Chen-Software/tina-next-ts/compare/main...content/main
+   https://github.com/Chen-Software/design-system.chen.software/compare/main...content/main
    ```
 
 #### 2. Review changes in GitHub interface
