@@ -24,17 +24,15 @@ export default function Post(props: ClientPageProps) {
 		variables: props.variables,
 		data: props.data,
 	});
-	const content = data.post.body;
+	const content = data.doc.body;
 	return (
 		<Flex flexDirection="row" gap={4}>
 			<Box minWidth={["128px", "196px", "256px", "320px", "384px"]}>
 				<PostList data={props.postListData} sidebarMode={true} />
 			</Box>
 			<Box>
-				<h1 data-tina-field={tinaField(data.post, "title")}>
-					{data.post.title}
-				</h1>
-				<Box data-tina-field={tinaField(data.post, "body")}>
+				<h1 data-tina-field={tinaField(data.doc, "title")}>{data.doc.title}</h1>
+				<Box data-tina-field={tinaField(data.doc, "body")}>
 					<TinaMarkdown content={content} />
 				</Box>
 			</Box>
