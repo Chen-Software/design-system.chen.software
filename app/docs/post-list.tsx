@@ -17,13 +17,13 @@ export default function PostList({ sidebarMode = false, ...props }) {
 			</Box>
 
 			<Box>
-				{props.data.postConnection.edges.map((post) => (
+				{props.data.docConnection.edges.map((post) => (
 					<Box
 						key={post.node.id}
 						fontSize={sidebarMode && "sm"}
 						paddingLeft={sidebarMode && 2}
 						className={
-							pathname === `/posts/${post.node._sys.filename}` && "active"
+							pathname === `/docs/${post.node._sys.filename}` && "active"
 						}
 						css={{
 							"&.active": {
@@ -42,7 +42,7 @@ export default function PostList({ sidebarMode = false, ...props }) {
 						}}
 					>
 						<Link
-							href={`/posts/${post.node._sys.filename}`}
+							href={`/docs/${post.node._sys.filename}`}
 							css={{
 								"&:hover": {
 									textDecoration: "underline",

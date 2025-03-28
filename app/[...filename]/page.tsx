@@ -1,4 +1,5 @@
 import client from "../../tina/__generated__/client";
+import DocPage from "../docs/[...filename]/page";
 import ClientPage from "./client-page";
 
 export async function generateStaticParams() {
@@ -15,6 +16,10 @@ export default async function Page({
 }: {
 	params: { filename: string[] };
 }) {
+	if (`${params.filename}` === "home") {
+		return <DocPage params={{ ...params, filename: ["intro"] }} />;
+	}
+
 	const data = await client.queries.page({
 		relativePath: `${params.filename}.mdx`,
 	});

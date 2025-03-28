@@ -1,14 +1,10 @@
 {
   "header": {
-    "name": "App Name",
+    "name": "Design System",
     "nav": [
       {
-        "href": "/",
-        "label": "Home"
-      },
-      {
-        "href": "/posts",
-        "label": "Blog"
+        "href": "/docs",
+        "label": "Docs"
       },
       {
         "href": "/about",
