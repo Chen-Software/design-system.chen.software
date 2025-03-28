@@ -4,11 +4,11 @@ title: Introduction
 
 Welcome to Chen's Design System, a comprehensive toolkit crafted to streamline the development of consistent, accessible, and high-performing user interfaces. This system is built on modern foundations that prioritize scalability, maintainability, and developer experience, ensuring your projects can evolve efficiently without compromising on quality.
 
-Why PandaCSS?
+## Why PandaCSS?
 
 At the core of our design system lies [PandaCSS](https://panda-css.com/), a CSS-in-JS framework renowned for its true zero-runtime approach. Unlike traditional CSS-in-JS solutions, PandaCSS generates static CSS during your build process, eliminating runtime overhead and ensuring optimal performance. This means your applications benefit from the flexibility of CSS-in-JS—like scoped styles and dynamic theming—without sacrificing load times or runtime efficiency.
 
-Built-in Consistency with Default Presets
+## Built-in Consistency with Default Presets
 
 To accelerate development and enforce visual coherence, Chen's Design System leverages PandaCSS's default color and typography presets. These thoughtfully curated tokens provide:
 
@@ -17,7 +17,7 @@ To accelerate development and enforce visual coherence, Chen's Design System lev
 
 By adopting these presets, we establish a shared design language out of the box, reducing redundancy and empowering teams to focus on innovation rather than reinvention.
 
-What’s Next?
+## What’s Next?
 
 This documentation will guide you through integrating and extending Chen's Design System, from utilizing foundational tokens to customizing themes and components. Whether you're a developer, designer, or product owner, these resources are designed to help you build exceptional experiences with speed and confidence.
 
