@@ -1,10 +1,7 @@
-import NextLink from "next/link";
+import NextLink, { type LinkProps as NextLinkProps } from "next/link";
 import React, { createElement as h } from "react";
-import { styled } from "../../../styled-system/jsx";
-import { link } from "../../../styled-system/recipes";
-import type { HTMLStyledProps } from "../../../styled-system/types";
 
-const BaseLink = React.forwardRef<
+const Link = React.forwardRef<
 	HTMLLinkElement,
 	React.LinkHTMLAttributes<HTMLLinkElement> & {
 		children?: React.ReactNode;
@@ -12,8 +9,7 @@ const BaseLink = React.forwardRef<
 >(({ ...props }, ref) => {
 	return h(NextLink, { ref, ...props }, props.children);
 });
-BaseLink.displayName = "Link";
+Link.displayName = "Link";
 
-export const Link = styled(BaseLink, link);
-export type LinkProps = HTMLStyledProps<typeof Link>;
+export type LinkProps = NextLinkProps;
 export default Link;
