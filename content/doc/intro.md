@@ -1,5 +1,6 @@
-
-Introduction
+---
+title: Introduction
+---
 
 Welcome to Chen's Design System, a comprehensive toolkit crafted to streamline the development of consistent, accessible, and high-performing user interfaces. This system is built on modern foundations that prioritize scalability, maintainability, and developer experience, ensuring your projects can evolve efficiently without compromising on quality.
 
