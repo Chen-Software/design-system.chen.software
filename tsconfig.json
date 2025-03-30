@@ -1,14 +1,15 @@
 {
 	"compilerOptions": {
+		"baseUrl": "./",
 		"lib": ["dom", "dom.iterable", "esnext"],
 		"allowJs": true,
 		"skipLibCheck": true,
 		"strict": false,
 		"noEmit": true,
 		"incremental": true,
-		"module": "esnext",
+		"module": "NodeNext",
 		"esModuleInterop": true,
-		"moduleResolution": "node",
+		"moduleResolution": "nodenext",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"jsx": "preserve",
